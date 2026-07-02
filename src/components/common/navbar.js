@@ -54,27 +54,25 @@ export default function Navbar() {
         className={`
           sticky top-0 z-50
           transition-all duration-500
-          supports-[backdrop-filter]:backdrop-blur-2xl
+          py-3 lg:py-4
+          supports-backdrop-filter:backdrop-blur-2xl
 
-          ${
-            scrolled
-              ? "border-b border-primary/10 bg-tertiary/92 shadow-xl shadow-primary/10"
-              : "border-b border-tertiary/0 bg-tertiary/78"
-          }
+          ${scrolled ? "bg-tertiary/92" : "bg-tertiary/78"}
         `}
       >
-        <div className="container py-3 lg:py-4">
+        <div className="container">
           <div
             className={`
               flex items-center justify-between gap-4
-              rounded-[2rem] border px-3.5 py-3 ring-1 ring-tertiary/80
+              rounded-[1.75rem] border border-primary/10 bg-tertiary/82 px-3.5 py-3
               transition-all duration-500
+              shadow-lg shadow-primary/5 backdrop-blur-xl
               sm:px-4 lg:px-5
 
               ${
                 scrolled
-                  ? "border-primary/15 bg-tertiary/90 shadow-xl shadow-primary/10"
-                  : "border-primary/10 bg-tertiary/60 shadow-lg shadow-primary/5"
+                  ? "border-primary/15 bg-tertiary/92 shadow-xl shadow-primary/10"
+                  : "border-primary/10 bg-tertiary/82"
               }
             `}
           >
@@ -99,10 +97,7 @@ export default function Navbar() {
               />
             </Link>
 
-            <nav
-              aria-label="Main navigation"
-              className="hidden items-center gap-2 rounded-full border border-primary/15 bg-tertiary/72 p-2 shadow-inner shadow-tertiary/70 ring-1 ring-tertiary/80 lg:flex"
-            >
+            <nav aria-label="Main navigation" className="hidden items-center gap-1 lg:flex">
               {navLinks.map((link) => {
                 const isActive = isActivePath(link.path);
 
@@ -112,14 +107,14 @@ export default function Navbar() {
                     href={link.path}
                     aria-current={isActive ? "page" : undefined}
                     className={`
-                      relative rounded-full border border-transparent px-6 py-3
+                      relative rounded-full px-6 py-3
                       text-sm font-bold
                       transition-all duration-300 xl:px-7
 
                       ${
                         isActive
-                          ? "border-primary bg-primary text-tertiary shadow-lg shadow-primary/20"
-                          : "text-secondary hover:border-primary/10 hover:bg-primary/5 hover:text-primary"
+                          ? "bg-primary text-tertiary shadow-lg shadow-primary/20"
+                          : "text-secondary hover:bg-primary/5 hover:text-primary"
                       }
                     `}
                   >
@@ -190,7 +185,7 @@ export default function Navbar() {
       <div
         id="mobile-navigation"
         className={`
-          fixed inset-0 z-[9999]
+          fixed inset-0 z-9999
           bg-primary/30 p-3 backdrop-blur-xl sm:p-5
 
           transition-all duration-500
@@ -201,7 +196,7 @@ export default function Navbar() {
       >
         <div
           className={`
-            mx-auto flex h-full max-w-2xl flex-col overflow-hidden rounded-[2rem]
+            mx-auto flex h-full max-w-2xl flex-col overflow-hidden rounded-4xl
             border border-tertiary/80 bg-tertiary shadow-2xl shadow-primary/25
             transition-all duration-500
 

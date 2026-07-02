@@ -2,6 +2,11 @@ import BreadcrumbSection from "@/components/common/breadcrumb";
 import CTASection from "@/components/common/cta-section";
 import ProductShowcaseSection from "@/components/pages/products/ProductShowcaseSection";
 
+export const metadata = {
+  title: "Products",
+  description: "Explore DR Heater products.",
+};
+
 const page = () => {
   return (
     <main className="w-full">

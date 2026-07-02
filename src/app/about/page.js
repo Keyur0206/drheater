@@ -6,6 +6,11 @@ import IndustriesSection from "@/components/pages/about/IndustriesSection";
 import ManufacturingProcessSection from "@/components/pages/about/ManufacturingProcessSection";
 import WhyChooseSection from "@/components/pages/about/WhyChooseSection";
 
+export const metadata = {
+  title: "About",
+  description: "Learn about DR Heater.",
+};
+
 export default function AboutPage() {
   const customLabels = [
     { path: "/", label: "Home" },

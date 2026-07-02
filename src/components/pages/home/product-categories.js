@@ -7,33 +7,41 @@ import Image from "next/image";
 const products = [
   {
     name: "Cartridge Heater",
-    description: "Compact heaters for dies, molds and precision tools.",
+    description: "High-density cartridge heaters for dies, moulds and compact industrial tooling.",
     code: "01",
-    application: "Dies & molds",
+    application: "Precision tooling",
+    image: "/product/cartridge(HD)heater.jpeg",
   },
   {
-    name: "Nozzle Heater",
-    description: "Stable heating for injection molding nozzle zones.",
+    name: "Nozzle Mica Heater",
+    description:
+      "Mica insulated nozzle heaters for stable temperature control in plastic machines.",
     code: "02",
-    application: "Molding zones",
+    application: "Injection moulding",
+    image: "/product/Nozzlemicaheater.jpeg",
   },
   {
-    name: "Coil Heater",
-    description: "Flexible heating for hot runner and compact assemblies.",
+    name: "Nozzle Spring Heater",
+    description:
+      "Spring nozzle heaters built for uniform heating and reliable machine performance.",
     code: "03",
-    application: "Hot runners",
+    application: "Hot runner systems",
+    image: "/product/Nozzelspringheater.jpeg",
   },
   {
-    name: "Tubular Heater",
-    description: "Formed heating elements for ovens, air and process systems.",
+    name: "Mica Band Heater",
+    description:
+      "Mica band heaters designed for barrels, extrusion units and plastic processing equipment.",
     code: "04",
-    application: "Ovens & air",
+    application: "Barrels & extrusion",
+    image: "/product/Micabandheater.jpeg",
   },
   {
-    name: "Mica & Ceramic Band Heater",
-    description: "Reliable barrel heating for plastic processing machinery.",
+    name: "Ceramic Band Heater",
+    description: "Ceramic band heaters delivering higher heat output and long-life performance.",
     code: "05",
-    application: "Barrels",
+    application: "Plastic machinery",
+    image: "/product/Ceramicbandheater.jpeg",
   },
 ];
 
@@ -51,14 +59,13 @@ const ProductCategories = () => {
     absolute
     left-1/2
     top-1/2
-    h-[700px]
-    w-[700px]
     -translate-x-1/2
     -translate-y-1/2
     rounded-full
     bg-accent/5
     blur-[140px]
   "
+        style={{ height: "700px", width: "700px" }}
       />
       <div className="container">
         <SectionHeader
@@ -69,7 +76,8 @@ const ProductCategories = () => {
 
         <motion.div
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="grid gap-3 sm:grid-cols-2 lg:flex lg:h-[340px] lg:gap-2"
+          className="grid gap-3 sm:grid-cols-2 lg:flex lg:gap-2"
+          style={{ minHeight: "340px" }}
         >
           {products.map((product, index) => (
             <motion.article
@@ -78,7 +86,7 @@ const ProductCategories = () => {
               transition={{ duration: 0.45, delay: index * 0.03, ease: "easeOut" }}
               tabIndex={0}
               className="
-                  group relative w-full h-48 sm:h-56 lg:h-[340px] lg:hover:flex-[2.45] lg:focus-visible:flex-[2.45]
+                  group relative w-full h-48 sm:h-56 lg:hover:flex-[2.45] lg:focus-visible:flex-[2.45]
                   overflow-hidden rounded-[1.35rem]
                   border border-accent/40 bg-tertiary shadow-xl shadow-black/10 cursor-pointer
                   transition-all duration-500 ease-out
@@ -86,16 +94,24 @@ const ProductCategories = () => {
                   focus-visible:-translate-y-2 focus-visible:border-primary focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20
                   lg:min-h-0 lg:flex-1 lg:basis-0
                 "
+              style={{ height: "340px" }}
             >
-              <Image
-                src="/industrial-heaters-hero.png"
-                alt={product.name}
-                fill
-                priority
-                sizes="(min-width: 1024px) 300px, 100vw"
-                className="object-cover"
+              <div className="absolute inset-0 bg-white/90">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  sizes="(min-width: 1024px) 300px, 100vw"
+                  className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div
+                className="absolute inset-0 opacity-100 transition-opacity duration-500 lg:opacity-0 lg:group-hover:opacity-100"
+                style={{
+                  background:
+                    "linear-gradient(to top, var(--primary), rgba(43, 38, 36, 0.6), transparent)",
+                }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="absolute top-0 left-0 right-0 p-3 sm:p-4 flex items-start justify-end gap-3">
                 <span
@@ -114,7 +130,13 @@ const ProductCategories = () => {
                 </span>
               </div>
 
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 via-primary/60 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 p-3 sm:p-4">
+              <div
+                className="absolute bottom-0 left-0 right-0 opacity-100 transition-opacity duration-500 lg:opacity-0 lg:group-hover:opacity-100 p-3 sm:p-4"
+                style={{
+                  background:
+                    "linear-gradient(to top, rgba(43, 38, 36, 0.9), rgba(43, 38, 36, 0.6), transparent)",
+                }}
+              >
                 <p className="max-w-xs text-lg font-black leading-tight text-transparent lg:group-hover:text-white  sm:text-xl lg:[writing-mode:vertical-rl] lg:rotate-180 lg:transition-all lg:duration-500 lg:group-hover:rotate-0 lg:group-hover:[writing-mode:horizontal-tb] lg:group-focus-visible:rotate-0 lg:group-focus-visible:[writing-mode:horizontal-tb]">
                   {product.name}
                 </p>

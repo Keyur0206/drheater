@@ -5,6 +5,11 @@ import ContactProcessSection from "@/components/pages/contact/ContactProcessSect
 import FAQSection from "@/components/pages/contact/FAQSection";
 import ManufacturingPresenceSection from "@/components/pages/contact/ManufacturingPresenceSection";
 
+export const metadata = {
+  title: "Contact Us",
+  description: "Get in touch with DR Heater.",
+};
+
 const page = () => {
   return (
     <main className="w-full">

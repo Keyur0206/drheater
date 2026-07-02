@@ -1,8 +1,13 @@
 import CTASection from "@/components/common/cta-section";
+import FeaturesTimeline from "@/components/pages/home/features-timeline";
 import Hero from "@/components/pages/home/hero";
 import Industries from "@/components/pages/home/industries";
 import ProductCategories from "@/components/pages/home/product-categories";
-import FeaturesTimeline from "@/components/pages/home/features-timeline";
+
+export const metadata = {
+  title: "Home",
+  description: "DR Heater industrial heating solutions.",
+};
 
 const page = () => {
   return (

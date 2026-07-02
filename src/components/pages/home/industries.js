@@ -11,21 +11,21 @@ const industries = [
     name: "Plastic Industry",
     description:
       "Precision heating solutions for plastic processing, extrusion and molding operations requiring stable temperature control and reliable performance.",
-    image: "/industrial-heaters-hero.png",
+    image: "/product/plastic.jpeg",
   },
   {
     id: "02",
     name: "Packaging Industry",
     description:
       "Industrial heaters designed for heat sealing, shrink wrapping, lamination and high-speed packaging applications.",
-    image: "/industrial-heaters-hero.png",
+    image: "/product/packing.jpeg",
   },
   {
     id: "03",
     name: "Injection Moulding",
     description:
       "Advanced heating elements for nozzle heating, hot runner systems and precision injection moulding processes.",
-    image: "/industrial-heaters-hero.png",
+    image: "/product/Injection.jpeg",
   },
 ];
 
@@ -39,9 +39,9 @@ export default function IndustriesSection() {
           absolute
           inset-0
           opacity-[0.03]
-          [background-image:linear-gradient(var(--primary)_1px,transparent_1px),linear-gradient(to_right,var(--primary)_1px,transparent_1px)]
-          [background-size:80px_80px]
+          bg-[linear-gradient(var(--primary)_1px,transparent_1px),linear-gradient(to_right,var(--primary)_1px,transparent_1px)]
         "
+        style={{ backgroundSize: "80px 80px" }}
       />
 
       <div
@@ -49,14 +49,13 @@ export default function IndustriesSection() {
           absolute
           left-1/2
           top-1/2
-          h-[700px]
-          w-[700px]
           -translate-x-1/2
           -translate-y-1/2
           rounded-full
           bg-accent/5
           blur-[140px]
         "
+        style={{ height: "700px", width: "700px" }}
       />
 
       <div className="container relative">
@@ -95,7 +94,7 @@ export default function IndustriesSection() {
                     }}
                     className="
                       overflow-hidden
-                      rounded-[2rem]
+                      rounded-4xl
                       border
                       border-primary/10
                       bg-white
@@ -109,12 +108,12 @@ export default function IndustriesSection() {
                       width={900}
                       height={700}
                       className="
-                        h-[280px]
+                        h-70
                         w-full
-                        rounded-[1.5rem]
+                        rounded-3xl
                         object-cover
-                        sm:h-[380px]
-                        lg:h-[500px]
+                        sm:h-95
+                        lg:h-125
                       "
                     />
                   </motion.div>
@@ -166,7 +165,7 @@ export default function IndustriesSection() {
                       <div
                         className="
         absolute
-        inset-[2px]
+        inset-0
         flex
         items-center
         justify-center
@@ -174,8 +173,8 @@ export default function IndustriesSection() {
         shadow-xl
         [clip-path:polygon(25%_6%,75%_6%,100%_50%,75%_94%,25%_94%,0_50%)]
 
-        lg:inset-[3px]
       "
+                        style={{ inset: "2px" }}
                       >
                         <div className="text-center">
                           <div
@@ -217,7 +216,7 @@ export default function IndustriesSection() {
                 <div className="relative">
                   <div
                     className="
-                      rounded-[2rem]
+                      rounded-4xl
                       border
                       border-primary/10
                       bg-white

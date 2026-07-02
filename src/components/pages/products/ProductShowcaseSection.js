@@ -10,10 +10,10 @@ const products = [
   {
     id: 1,
     name: "Cartridge Heater",
-    image: "/industrial-heaters-hero.png",
+    image: "/product/cartridge(HD)heater.jpeg",
     applications: ["Dies & Moulds", "Packaging", "Plastic Industry"],
     description:
-      "High-performance cartridge heaters designed for efficient heat transfer in industrial equipment and tooling applications.",
+      "High-density cartridge heaters built for precision heating in dies, moulds, and compact industrial tooling.",
     specifications: [
       "SS 304 / SS 316 Construction",
       "High Density Design",
@@ -23,13 +23,13 @@ const products = [
   },
   {
     id: 2,
-    name: "Nozzle Heater",
-    image: "/industrial-heaters-hero.png",
+    name: "Nozzle Mica Heater",
+    image: "/product/Nozzlemicaheater.jpeg",
     applications: ["Injection Moulding", "Extrusion", "Plastic Processing"],
     description:
-      "Precision nozzle heaters developed for stable temperature control in injection moulding and extrusion machines.",
+      "Mica nozzle heaters designed for stable temperature control and efficient heat transfer in plastic processing machines.",
     specifications: [
-      "Mica & Ceramic Options",
+      "Mica Insulated Body",
       "Energy Efficient",
       "Uniform Heating",
       "Long Service Life",
@@ -37,60 +37,91 @@ const products = [
   },
   {
     id: 3,
-    name: "Coil Heater",
-    image: "/industrial-heaters-hero.png",
-    applications: ["Hot Runner", "Nozzle Heating", "Packaging"],
+    name: "Nozzle Spring Heater",
+    image: "/product/Nozzelspringheater.jpeg",
+    applications: ["Hot Runner", "Nozzle Heating", "Plastic Machines"],
     description:
-      "Flexible coil heaters offering fast response time and excellent thermal efficiency.",
-    specifications: ["Compact Design", "High Watt Density", "Custom Shapes", "Rapid Heating"],
+      "Spring nozzle heaters built for uniform heating and reliable performance in injection moulding systems.",
+    specifications: ["Compact Design", "High Watt Density", "Fast Response", "Custom Fit"],
   },
   {
     id: 4,
-    name: "Tubular Heater",
-    image: "/industrial-heaters-hero.png",
-    applications: ["Ovens", "Air Heating", "Industrial Equipment"],
-    description:
-      "Versatile tubular heaters engineered for diverse industrial heating applications.",
-    specifications: [
-      "Custom Bending",
-      "Corrosion Resistant",
-      "Reliable Performance",
-      "Long Lifespan",
-    ],
-  },
-  {
-    id: 5,
-    name: "Band Heater",
-    image: "/industrial-heaters-hero.png",
+    name: "Mica Band Heater",
+    image: "/product/Micabandheater.jpeg",
     applications: ["Barrels", "Plastic Machines", "Extrusion"],
-    description: "Industrial band heaters providing consistent heating performance and durability.",
+    description:
+      "Mica band heaters engineered for barrels, extrusion units, and plastic processing machinery.",
     specifications: [
-      "Mica & Ceramic Type",
+      "Mica Insulation",
       "Efficient Heat Transfer",
       "Robust Construction",
       "Easy Installation",
     ],
   },
   {
+    id: 5,
+    name: "Ceramic Band Heater",
+    image: "/product/Ceramicbandheater.jpeg",
+    applications: ["Extrusion", "Injection Moulding", "Plastic Machinery"],
+    description:
+      "Ceramic band heaters delivering high heat output, long life, and dependable process stability.",
+    specifications: [
+      "Ceramic Insulation",
+      "High Temperature Support",
+      "Durable Performance",
+      "Energy Saving",
+    ],
+  },
+  {
     id: 6,
-    name: "Thermocouple",
-    image: "/industrial-heaters-hero.png",
+    name: "Perforated Heater",
+    image: "/product/Proforetedheater.jpeg",
     applications: ["Temperature Monitoring", "Process Control"],
-    description: "Accurate temperature sensing solutions for industrial process applications.",
-    specifications: ["J Type", "K Type", "Custom Length", "Industrial Grade"],
+    description:
+      "Perforated heaters designed for controlled heating with better airflow and efficient thermal distribution.",
+    specifications: [
+      "Perforated Body",
+      "Even Heat Distribution",
+      "Quick Heating",
+      "Industrial Grade",
+    ],
   },
   {
     id: 7,
-    name: "Immersion Heater",
-    image: "/industrial-heaters-hero.png",
-    applications: ["Chemical Industry", "Water Heating", "Oil Heating"],
-    description: "Heavy-duty immersion heaters designed for direct liquid heating applications.",
+    name: "Finned Air Heater",
+    image: "/product/Airheater.png",
+    applications: ["Air Heating", "Drying Systems", "Industrial Equipment"],
+    description:
+      "Finned air heaters built for efficient air heating, drying, and process temperature applications.",
     specifications: [
-      "High Efficiency",
+      "Finned Design",
+      "Fast Heat Transfer",
       "Corrosion Resistant",
       "Custom Wattage",
-      "Industrial Performance",
     ],
+  },
+  {
+    id: 8,
+    name: "Finch Heater",
+    image: "/product/Finchheater.jpeg",
+    applications: ["Air Heating", "Process Systems", "Industrial Drying"],
+    description:
+      "Compact finch heaters designed for efficient thermal transfer in industrial air and drying applications.",
+    specifications: [
+      "Compact Form Factor",
+      "Fast Heat Response",
+      "Uniform Air Flow",
+      "Industrial Grade",
+    ],
+  },
+  {
+    id: 9,
+    name: "Power Saver Heater",
+    image: "/product/Powersaverheater.jpeg",
+    applications: ["Energy Saving", "Process Heating", "Custom Machines"],
+    description:
+      "Power saver heaters built to deliver efficient heating performance while reducing energy consumption.",
+    specifications: ["Energy Efficient", "High Performance", "Durable Build", "Custom Design"],
   },
 ];
 
@@ -132,7 +163,7 @@ export default function ProductShowcaseSection() {
                 group
                 cursor-pointer
                 overflow-hidden
-                rounded-[2rem]
+                rounded-4xl
                 border
                 border-primary/10
                 bg-white
@@ -142,16 +173,15 @@ export default function ProductShowcaseSection() {
                 hover:shadow-xl
               "
             >
-              <div className="relative overflow-hidden">
+              <div className="relative aspect-4/3 overflow-hidden bg-white/90">
                 <Image
                   src={product.image}
                   alt={product.name}
-                  width={500}
-                  height={400}
+                  fill
+                  sizes="(max-width: 639px) 100vw, (max-width: 1279px) 50vw, 25vw"
                   className="
-                    h-[240px]
-                    w-full
-                    object-cover
+                    object-contain
+                    p-4
                     transition-transform
                     duration-700
                     group-hover:scale-110
@@ -202,7 +232,7 @@ export default function ProductShowcaseSection() {
                 <div
                   className="
                     mt-5
-                    h-[3px]
+                    h-0.75
                     w-14
                     rounded-full
                     bg-accent
@@ -229,7 +259,7 @@ export default function ProductShowcaseSection() {
             className="
         fixed
         inset-0
-        z-[999]
+        z-999
         flex
         items-center
         justify-center
@@ -250,7 +280,7 @@ export default function ProductShowcaseSection() {
           w-full
           max-w-4xl
           overflow-y-auto
-          rounded-[2rem]
+            rounded-4xl
           border
           border-primary/10
           bg-white
@@ -406,7 +436,7 @@ export default function ProductShowcaseSection() {
                 <div
                   className="
               mt-10
-              rounded-[1.5rem]
+              rounded-3xl
               bg-primary
               p-6
               text-white

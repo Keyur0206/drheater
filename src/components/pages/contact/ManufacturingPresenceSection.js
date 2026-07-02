@@ -2,13 +2,31 @@
 
 import SectionHeader from "@/components/common/section-header";
 import { motion } from "framer-motion";
-import { Boxes, Factory, FlaskConical, Layers3, Package, Settings } from "lucide-react";
+import {
+  Boxes,
+  Factory,
+  FlaskConical,
+  Layers3,
+  Package,
+  Settings,
+  UtensilsCrossed,
+} from "lucide-react";
 
 const industries = [
   {
     title: "Plastic Industry",
     icon: Factory,
     position: "top-0 left-1/2 -translate-x-1/2",
+  },
+  {
+    title: "Pharma Industry",
+    icon: FlaskConical,
+    position: "left-[20%] top-[12%]",
+  },
+  {
+    title: "Food Industry",
+    icon: UtensilsCrossed,
+    position: "right-[20%] top-[12%]",
   },
   {
     title: "Packaging Industry",
@@ -47,9 +65,12 @@ export default function ManufacturingPresenceSection() {
           absolute
           inset-0
           opacity-[0.035]
-          [background-image:linear-gradient(var(--primary)_1px,transparent_1px),linear-gradient(to_right,var(--primary)_1px,transparent_1px)]
-          [background-size:80px_80px]
         "
+        style={{
+          backgroundImage:
+            "linear-gradient(var(--primary) 1px, transparent 1px), linear-gradient(to right, var(--primary) 1px, transparent 1px)",
+          backgroundSize: "80px 80px",
+        }}
       />
 
       {/* Glow */}
@@ -59,14 +80,13 @@ export default function ManufacturingPresenceSection() {
           absolute
           left-1/2
           top-1/2
-          h-[700px]
-          w-[700px]
           -translate-x-1/2
           -translate-y-1/2
           rounded-full
           bg-accent/5
           blur-[140px]
         "
+        style={{ height: "700px", width: "700px" }}
       />
 
       <div className="container relative">
@@ -78,7 +98,10 @@ export default function ManufacturingPresenceSection() {
 
         {/* Desktop */}
 
-        <div className="relative mx-auto mt-24 hidden h-[850px] max-w-[1300px] xl:block">
+        <div
+          className="relative mx-auto mt-24 hidden xl:block"
+          style={{ height: "850px", maxWidth: "1300px" }}
+        >
           {/* Rotating Rings */}
 
           <motion.div
@@ -92,14 +115,13 @@ export default function ManufacturingPresenceSection() {
               absolute
               left-1/2
               top-1/2
-              h-[420px]
-              w-[420px]
               -translate-x-1/2
               -translate-y-1/2
               rounded-full
               border
               border-primary/10
             "
+            style={{ height: "420px", width: "420px" }}
           />
 
           <motion.div
@@ -113,14 +135,13 @@ export default function ManufacturingPresenceSection() {
               absolute
               left-1/2
               top-1/2
-              h-[560px]
-              w-[560px]
               -translate-x-1/2
               -translate-y-1/2
               rounded-full
               border
               border-primary/5
             "
+            style={{ height: "560px", width: "560px" }}
           />
 
           {/* Connection Lines */}
@@ -184,8 +205,6 @@ export default function ManufacturingPresenceSection() {
               }}
               className="
                 flex
-                h-[300px]
-                w-[300px]
                 flex-col
                 items-center
                 justify-center
@@ -195,6 +214,7 @@ export default function ManufacturingPresenceSection() {
                 bg-white
                 shadow-[0_40px_100px_rgba(0,0,0,0.08)]
               "
+              style={{ height: "300px", width: "300px" }}
             >
               <div
                 className="
@@ -248,7 +268,7 @@ export default function ManufacturingPresenceSection() {
               >
                 <div
                   className="
-                    w-[240px]
+                    w-60
                     rounded-[1.75rem]
                     border
                     border-primary/10
@@ -292,7 +312,7 @@ export default function ManufacturingPresenceSection() {
         <div className="mt-14 xl:hidden">
           <div
             className="
-              rounded-[2rem]
+              rounded-4xl
               border
               border-primary/10
               bg-white
@@ -312,7 +332,7 @@ export default function ManufacturingPresenceSection() {
             </p>
           </div>
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {industries.map((item) => {
               const Icon = item.icon;
 
@@ -323,7 +343,7 @@ export default function ManufacturingPresenceSection() {
                     y: -5,
                   }}
                   className="
-                    rounded-[1.5rem]
+                    rounded-3xl
                     border
                     border-primary/10
                     bg-white
