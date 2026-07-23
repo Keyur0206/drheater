@@ -91,8 +91,8 @@ export default function Navbar() {
       duration-300
       group-hover:scale-105
 
-      sm:h-14
-      lg:h-20
+      sm:h-13
+      lg:h-16
     "
               />
             </Link>
@@ -107,9 +107,9 @@ export default function Navbar() {
                     href={link.path}
                     aria-current={isActive ? "page" : undefined}
                     className={`
-                      relative rounded-full px-6 py-3
+                      relative rounded-full px-5 py-2.5
                       text-sm font-bold
-                      transition-all duration-300 xl:px-7
+                      transition-all duration-300 xl:px-6
 
                       ${
                         isActive
@@ -125,7 +125,7 @@ export default function Navbar() {
             </nav>
 
             <div className="hidden items-center gap-3 lg:flex">
-              <Link href="/contact" className="btn-primary min-h-12 px-6">
+              <Link href="/contact" className="btn-primary min-h-11 px-5">
                 Get Started
               </Link>
             </div>

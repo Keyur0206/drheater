@@ -4,11 +4,6 @@ import Hero from "@/components/pages/home/hero";
 import Industries from "@/components/pages/home/industries";
 import ProductCategories from "@/components/pages/home/product-categories";
 
-export const metadata = {
-  title: "Home",
-  description: "DR Heater industrial heating solutions.",
-};
-
 const page = () => {
   return (
     <div>

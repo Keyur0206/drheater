@@ -30,7 +30,7 @@ export default function AboutPage() {
       <EngineeringExcellenceSection />
       <ManufacturingProcessSection />
       <WhyChooseSection />
-      <div className="container py-16 sm:py-20 lg:py-24">
+      <div className="container py-12 sm:py-14 lg:py-16">
         <CTASection
           title="Partner With A Team Focused On Quality & Reliability"
           description="At DR Heater, we combine engineering expertise, precision manufacturing and dependable support to deliver industrial heating solutions you can trust."

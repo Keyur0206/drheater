@@ -26,10 +26,10 @@ const imageReveal = {
 
 const Hero = () => {
   return (
-    <section className="section relative isolate overflow-hidden border-t border-primary/10 bg-tertiary !py-8 sm:!py-10 lg:h-[calc(100svh-112px)] lg:!py-7">
+    <section className="section relative isolate overflow-hidden border-t border-primary/10 bg-tertiary !py-7 sm:!py-8 lg:min-h-[calc(100svh-92px)] lg:!py-6">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--primary)_1px,transparent_1px),linear-gradient(to_bottom,var(--primary)_1px,transparent_1px)] bg-[size:72px_72px] opacity-[0.035]" />
 
-      <div className="container relative grid h-full items-center gap-4 lg:grid-cols-[0.95fr_0.9fr] lg:gap-8">
+      <div className="container relative grid min-h-full items-center gap-5 lg:grid-cols-[1fr_0.9fr] lg:gap-10">
         <div
           className="
     absolute
@@ -64,7 +64,7 @@ const Hero = () => {
           <motion.h1
             variants={fadeUp}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="max-w-3xl text-2xl font-black leading-[1.08] tracking-normal text-primary sm:text-4xl lg:text-[3.35rem] xl:text-[3.8rem]"
+            className="max-w-3xl text-2xl font-black leading-[1.08] tracking-normal text-primary sm:text-4xl lg:text-[3rem] xl:text-[3.35rem]"
           >
             Precision heaters for machines, molds and process lines.
           </motion.h1>
@@ -91,7 +91,7 @@ const Hero = () => {
           <motion.div
             variants={fadeUp}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="mt-4 flex flex-wrap items-center gap-3 lg:mt-5"
+            className="mt-4 flex flex-wrap items-center gap-2.5 lg:mt-4"
           >
             <Link href="/products" className="btn-primary">
               View Product Range
@@ -104,7 +104,7 @@ const Hero = () => {
           <motion.div
             variants={fadeUp}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="mt-4 grid max-w-xl grid-cols-2 gap-2 rounded-[1.5rem] border border-primary/10 bg-tertiary/90 p-2 shadow-lg shadow-primary/5 sm:grid-cols-4 lg:mt-5"
+            className="mt-4 grid max-w-xl grid-cols-2 gap-2 rounded-[1.25rem] border border-primary/10 bg-tertiary/90 p-2 shadow-lg shadow-primary/5 sm:grid-cols-4"
           >
             {productLines.map((item, index) => (
               <motion.div
@@ -159,7 +159,7 @@ const Hero = () => {
             animate="show"
             variants={imageReveal}
             transition={{ duration: 0.65, ease: "easeOut", delay: 0.12 }}
-            className="relative w-full max-w-[390px] overflow-hidden rounded-[1.7rem] border border-accent/40 bg-tertiary p-2.5 shadow-2xl shadow-primary/15 ring-1 ring-tertiary sm:max-w-[500px] lg:max-w-[470px]"
+            className="relative w-full max-w-[390px] overflow-hidden rounded-[1.5rem] border border-accent/40 bg-tertiary p-2 shadow-2xl shadow-primary/15 ring-1 ring-tertiary sm:max-w-[470px] lg:max-w-[440px]"
           >
             <div className="overflow-hidden rounded-[1.25rem] border border-primary/10 bg-tertiary">
               <div className="flex items-center justify-between gap-4 border-b border-primary/10 bg-tertiary px-4 py-3">
@@ -177,7 +177,7 @@ const Hero = () => {
               <motion.div
                 whileHover={{ scale: 1.015 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                className="relative aspect-[1.7] w-full overflow-hidden bg-tertiary sm:aspect-[1.35] lg:aspect-[1.32]"
+                className="relative aspect-[1.7] w-full overflow-hidden bg-tertiary sm:aspect-[1.42] lg:aspect-[1.38]"
               >
                 <Image
                   src="/industrial-heaters-hero.png"

@@ -15,7 +15,7 @@ const page = () => {
         description="Explore our complete range of industrial heating elements, custom-engineered heaters and thermal solutions designed for diverse manufacturing applications."
       />
       <ProductShowcaseSection />
-      <div className="container py-16 sm:py-20 lg:py-24">
+      <div className="container py-12 sm:py-14 lg:py-16">
         <CTASection
           title="Need Help Choosing The Right Heater?"
           description="Our team can help you select the ideal heating solution based on your application, operating conditions and performance requirements."

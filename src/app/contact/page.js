@@ -21,7 +21,7 @@ const page = () => {
       <ManufacturingPresenceSection />
       <ContactProcessSection />
       <FAQSection />
-      <div className="container py-16 sm:py-20 lg:py-24">
+      <div className="container py-12 sm:py-14 lg:py-16">
         <CTASection
           title="Ready To Discuss Your Heating Requirements?"
           description="Whether you need a custom industrial heater, technical guidance or a manufacturing partner, our team is ready to help you find the right solution."

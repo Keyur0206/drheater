@@ -61,7 +61,7 @@ const products = [
   {
     id: 5,
     name: "Ceramic Band Heater",
-    image: "/product/Ceramicbandheater.jpeg",
+    image: "/product/one.png",
     applications: ["Extrusion", "Injection Moulding", "Plastic Machinery"],
     description:
       "Ceramic band heaters delivering high heat output, long life, and dependable process stability.",
@@ -122,6 +122,29 @@ const products = [
     description:
       "Power saver heaters built to deliver efficient heating performance while reducing energy consumption.",
     specifications: ["Energy Efficient", "High Performance", "Durable Build", "Custom Design"],
+  },
+  {
+    id: 10,
+    name: "Industrial Heater Jacket",
+    image: "/product/two.jpeg",
+    applications: ["Thermal Insulation", "Heat Retention", "Industrial Equipment"],
+    description:
+      "Industrial heater jackets designed for thermal insulation and heat retention in heating elements and equipment.",
+    specifications: [
+      "High Temperature Insulation",
+      "Thermal Protection",
+      "Durable Material",
+      "Custom Fit Available",
+    ],
+  },
+  {
+    id: 11,
+    name: "Industrial Heater Cover",
+    image: "/product/three.jpeg",
+    applications: ["Equipment Protection", "Safety", "Thermal Isolation"],
+    description:
+      "Industrial heater covers engineered for equipment protection, safety, and thermal isolation in industrial applications.",
+    specifications: ["Protective Design", "Heat Resistant", "Easy Installation", "Long Lifespan"],
   },
 ];
 

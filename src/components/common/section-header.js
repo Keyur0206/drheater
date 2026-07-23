@@ -9,7 +9,7 @@ const fadeUp = {
 
 const SectionHeader = ({ tag, title, description }) => {
   return (
-    <div className="mb-7 flex flex-col gap-4 md:mb-8 md:flex-row md:items-end md:justify-between">
+    <div className="mb-6 flex flex-col gap-3 md:mb-7 md:flex-row md:items-end md:justify-between">
       <motion.div
         initial="hidden"
         whileInView="show"
@@ -27,7 +27,7 @@ const SectionHeader = ({ tag, title, description }) => {
         <motion.h2
           variants={fadeUp}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="text-2xl font-black leading-tight text-primary sm:text-3xl lg:text-4xl"
+          className="text-2xl font-black leading-tight text-primary sm:text-3xl lg:text-[2.1rem]"
         >
           {title}
         </motion.h2>

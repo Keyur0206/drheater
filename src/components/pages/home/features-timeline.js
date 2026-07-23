@@ -80,7 +80,7 @@ export default function WhyChooseUsSection() {
           description="Combining engineering expertise, premium manufacturing and dependable industrial reliability."
         />
 
-        <div className="mt-16 space-y-14 lg:space-y-20">
+        <div className="mt-10 space-y-10 lg:space-y-14">
           {features.map((item, index) => {
             const reverse = index % 2 !== 0;
 
@@ -279,25 +279,6 @@ export default function WhyChooseUsSection() {
         w-4
         rounded-full
         bg-accent/60
-      "
-                    />
-
-                    <motion.div
-                      animate={{
-                        x: [0, 10, 0],
-                      }}
-                      transition={{
-                        duration: 5,
-                        repeat: Infinity,
-                      }}
-                      className="
-        absolute
-        bottom-4
-        right-12
-        h-3
-        w-3
-        rounded-full
-        bg-primary/20
       "
                     />
                   </motion.div>

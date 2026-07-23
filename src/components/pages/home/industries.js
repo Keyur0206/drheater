@@ -25,13 +25,13 @@ const industries = [
     name: "Injection Moulding",
     description:
       "Advanced heating elements for nozzle heating, hot runner systems and precision injection moulding processes.",
-    image: "/product/Injection.jpeg",
+    image: "/three.png",
   },
 ];
 
 export default function IndustriesSection() {
   return (
-    <section className="relative overflow-hidden bg-tertiary py-16 lg:py-24">
+    <section className="relative overflow-hidden bg-tertiary py-12 lg:py-16">
       {/* Background */}
 
       <div
@@ -65,7 +65,7 @@ export default function IndustriesSection() {
           description="Reliable thermal solutions engineered for diverse manufacturing sectors across modern industries."
         />
 
-        <div className="mt-16 space-y-16 lg:space-y-24">
+        <div className="mt-10 space-y-12 lg:space-y-16">
           {industries.map((industry, index) => {
             const reverse = index % 2 !== 0;
 
@@ -79,9 +79,9 @@ export default function IndustriesSection() {
                 className={`
                   grid
                   items-center
-                  gap-8
+                  gap-6
                   lg:grid-cols-2
-                  lg:gap-14
+                  lg:gap-10
                   ${reverse ? "lg:[&>*:first-child]:order-2" : ""}
                 `}
               >
@@ -108,12 +108,12 @@ export default function IndustriesSection() {
                       width={900}
                       height={700}
                       className="
-                        h-70
+                        h-60
                         w-full
                         rounded-3xl
                         object-cover
-                        sm:h-95
-                        lg:h-125
+                        sm:h-75
+                        lg:h-96
                       "
                     />
                   </motion.div>
@@ -147,8 +147,8 @@ export default function IndustriesSection() {
       sm:h-20
       sm:w-20
 
-      lg:h-32
-      lg:w-32
+      lg:h-28
+      lg:w-28
     "
                     >
                       <div
@@ -185,7 +185,7 @@ export default function IndustriesSection() {
             text-accent
 
             sm:text-2xl
-            lg:text-5xl
+            lg:text-4xl
           "
                           >
                             {industry.id}
@@ -220,9 +220,9 @@ export default function IndustriesSection() {
                       border
                       border-primary/10
                       bg-white
-                      p-8
+                      p-6
                       shadow-lg
-                      lg:p-10
+                      lg:p-8
                     "
                   >
                     <span
@@ -248,7 +248,7 @@ export default function IndustriesSection() {
                         text-3xl
                         font-black
                         text-primary
-                        lg:text-5xl
+                        lg:text-4xl
                       "
                     >
                       {industry.name}
@@ -256,8 +256,8 @@ export default function IndustriesSection() {
 
                     <p
                       className="
-                        mt-5
-                        leading-8
+                        mt-4
+                        leading-7
                         text-secondary
                       "
                     >
@@ -266,27 +266,27 @@ export default function IndustriesSection() {
 
                     {/* Features */}
 
-                    <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                      <div className="rounded-xl bg-accent/5 p-4">
+                    <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                      <div className="rounded-xl bg-accent/5 p-3">
                         <h4 className="font-bold text-primary">Precision Control</h4>
                       </div>
 
-                      <div className="rounded-xl bg-accent/5 p-4">
+                      <div className="rounded-xl bg-accent/5 p-3">
                         <h4 className="font-bold text-primary">Industrial Grade</h4>
                       </div>
 
-                      <div className="rounded-xl bg-accent/5 p-4">
+                      <div className="rounded-xl bg-accent/5 p-3">
                         <h4 className="font-bold text-primary">Custom Design</h4>
                       </div>
 
-                      <div className="rounded-xl bg-accent/5 p-4">
+                      <div className="rounded-xl bg-accent/5 p-3">
                         <h4 className="font-bold text-primary">Long Service Life</h4>
                       </div>
                     </div>
 
                     {/* CTA */}
 
-                    <div className="mt-8 flex flex-wrap gap-4">
+                    <div className="mt-6 flex flex-wrap gap-3">
                       <Link
                         href="/products"
                         className="
